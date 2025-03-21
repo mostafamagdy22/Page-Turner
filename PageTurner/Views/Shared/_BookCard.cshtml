@@ -1,0 +1,25 @@
+﻿@model Book
+@{
+    var isAdmin = ViewData["isAdmin"] as bool? ?? false;
+}
+
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="@Model.Image" class="card-img-top" alt="@Model.Title" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Title</h5>
+            <p class="card-text">@Model.Descreption</p>
+            <p class="card-text">
+                <small class="text-muted">
+                    By @string.Join(", ", Model.BookAuthors.Select(ba => ba.Author.Name))
+                </small>
+            </p>
+            <a asp-controller="Books" asp-action="Details" asp-route-isbn="@Model.ISBN">Details</a>
+            @if (isAdmin)
+            {
+                <a asp-controller="Books" asp-action="Edit" asp-route-isbn="@Model.ISBN" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-controller="Books" asp-action="Delete" asp-route-isbn="@Model.ISBN" class="btn btn-danger btn-sm">Delete</a>
+            }
+        </div>
+    </div>
+</div>

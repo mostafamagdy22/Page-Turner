@@ -1,0 +1,12 @@
+﻿@model Author
+
+<div class="col-md-4 mb-4">
+    <div class="card">
+        <img src="@(!string.IsNullOrEmpty(Model.Image) ? Model.Image : "/images/default-author.jpg")" asp-append-version="true" class="img-fluid rounded" alt="@Model.Name" style="height: 200px; object-fit: cover;">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">@Model.Descreption</p>
+            <a asp-action="" class="btn btn-primary">View Details</a>
+        </div>
+    </div>
+</div>

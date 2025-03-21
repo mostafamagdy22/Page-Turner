@@ -1,0 +1,17 @@
+﻿@model IEnumerable<PageTurner.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <partial name="_BookCard" model="item" />
+        @* Alternatively, you can use the asynchronous helper:
+           @await Html.PartialAsync("_BookCard", item)
+        *@
+    }
+</div>

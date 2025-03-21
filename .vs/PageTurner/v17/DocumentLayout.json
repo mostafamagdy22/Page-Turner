@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\projects\\MVC projects\\PageTurner\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\views\\books\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\services\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\services\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\views\\books\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\views\\shared\\_bookcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\views\\shared\\_bookcard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|d:\\projects\\mvc projects\\pageturner\\pageturner\\models\\bookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AD9B887-01C3-48B8-8DDD-CE6EDE25D062}|PageTurner\\PageTurner.csproj|solutionrelative:pageturner\\models\\bookauthor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Books\\Details.cshtml",
+              "RelativeDocumentMoniker": "PageTurner\\Views\\Books\\Details.cshtml",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Books\\Details.cshtml",
+              "RelativeToolTip": "PageTurner\\Views\\Books\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T23:43:32.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "PageTurner\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:26:09.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Program.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Program.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Program.cs",
+              "RelativeToolTip": "PageTurner\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:24:27.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Models\\Book.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Models\\Book.cs",
+              "RelativeToolTip": "PageTurner\\Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:22:10.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookAuthor.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Models\\BookAuthor.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Models\\BookAuthor.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Models\\BookAuthor.cs",
+              "RelativeToolTip": "PageTurner\\Models\\BookAuthor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:20:54.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_BookCard.cshtml",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Shared\\_BookCard.cshtml",
+              "RelativeDocumentMoniker": "PageTurner\\Views\\Shared\\_BookCard.cshtml",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Shared\\_BookCard.cshtml",
+              "RelativeToolTip": "PageTurner\\Views\\Shared\\_BookCard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T23:20:12.815Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Books\\Index.cshtml",
+              "RelativeDocumentMoniker": "PageTurner\\Views\\Books\\Index.cshtml",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Views\\Books\\Index.cshtml",
+              "RelativeToolTip": "PageTurner\\Views\\Books\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-21T23:02:23.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Controllers\\BooksController.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "PageTurner\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAswFMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T23:02:15.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Services\\BookRepository.cs",
+              "RelativeDocumentMoniker": "PageTurner\\Services\\BookRepository.cs",
+              "ToolTip": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\Services\\BookRepository.cs",
+              "RelativeToolTip": "PageTurner\\Services\\BookRepository.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAA0wE8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T22:57:01.562Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
