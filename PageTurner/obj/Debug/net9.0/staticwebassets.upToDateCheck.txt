@@ -32,6 +32,7 @@ D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bo
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\js\LocalStorage.js
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
@@ -62,10 +63,30 @@ D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\jquery-validation-uno
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
-wwwroot\images\0049ca7650f4460bbe29067564f0a6bb.jpg
-wwwroot\images\21af1cc461014803995ea5ba55fad166.jpg
-wwwroot\images\6c224de3-8fec-4a41-8d89-bd970bcd260a.jpg
-wwwroot\images\cf87cc32-dc42-4a9d-8d5c-ee95e52196bb.jpg
+wwwroot\images\Authors\46ca4a9e-cda3-4e97-b041-c9009da7a6b8.jpg
+wwwroot\images\Authors\86022792-cdd8-4cc5-b72e-47899a673611.jpg
+wwwroot\images\Authors\93ad1c26-dfe7-47da-a710-fc569774c47b.jpg
+wwwroot\images\Authors\9fab0510-363c-4cdc-a55c-f5da65c8bcf8.jpg
+wwwroot\images\Authors\a0965212-9e02-42a4-9aed-370f1b59114a.jpg
+wwwroot\images\Authors\beea4b8d-0a53-49c7-96f6-a16176f4f99b.jpg
+wwwroot\images\Authors\c9c34817-b5cc-40c6-acf8-e38d2e0fdaf7.jpg
+wwwroot\images\Authors\defaultFemale.jpg
+wwwroot\images\Authors\defaultMale.jpg
+wwwroot\images\Books\0876d6ba-cb85-49a0-ad9a-4befca7bd4d2.jpg
+wwwroot\images\Books\43c1d6ec-4413-46a7-9942-a26bbf84fa83.jpg
+wwwroot\images\Books\4de7bc20-fb8d-4c85-be90-0ce541c6dcc2.jpg
+wwwroot\images\Books\59c7bd42-77b7-41a0-9bee-d5d70f0c82cc.jpg
+wwwroot\images\Books\85fa63d8-a9fd-49b1-85e3-d455c0651d96.jpg
+wwwroot\images\Books\88155d93-0c18-4045-8e0a-42feb20a20d3.jpg
+wwwroot\images\Books\99a0cc0d-0613-490e-87e6-e5fc3411cb2d.jpg
+wwwroot\images\Books\a1d612c8-994a-4ae4-9603-6ec89fe6089e.jpg
+wwwroot\images\Books\afd7a081-36ab-4b3e-8748-13d4c3205509.jpg
+wwwroot\images\Books\d18e0956-a5fe-4bfa-8f99-34f3d6fa65b6.jpg
+wwwroot\images\Books\d95fe551-f09d-411e-a364-00b5559a8b23.jpg
+wwwroot\images\Books\da4f5c4b-5c54-443a-ba29-4bdf108f3728.jpg
+wwwroot\images\Books\default.jpg
+wwwroot\images\Books\f575019f-c1a0-4eb2-b7d7-af0d84dbed81.jpg
+wwwroot\js\LocalStorage.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

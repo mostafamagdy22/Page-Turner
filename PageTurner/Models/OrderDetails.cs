@@ -13,7 +13,7 @@ namespace PageTurner.Models
 		public Order Order { get; set; }
 
 		[ForeignKey(nameof(Book))]
-		public string BookISBN { get; set; }
+		public int BookID { get; set; }
 		public Book Book { get; set; }
 
 		public int Quantity { get; set; }

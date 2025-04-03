@@ -1,0 +1,74 @@
+﻿<section class="h-100 h-custom" style="background-color: #f4f7f6;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-lg-8">
+                <div class="card card-registration card-registration-2 shadow-lg rounded-4">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-12">
+                                <div class="p-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <h1 class="fw-bold mb-0" style="color: #3d3d3d;">Shopping Cart</h1>
+                                        <h6 class="mb-0 text-muted" id="itemCount">0 items</h6>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div id="cartItemsContainer"></div>
+
+                                    <div class="pt-5">
+                                        <h6 class="mb-0">
+                                            <a asp-controller="Books" asp-action="Index" class="text-body" style="color: #6c757d;">
+                                                <i class="fas fa-long-arrow-alt-left me-2"></i>Back to Books
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel for Summary -->
+            <div class="col-lg-4 bg-light p-4 rounded-end mt-4 mt-lg-0">
+                <h3 class="fw-bold mb-5 mt-2 pt-1" style="color: #3d3d3d;">Summary</h3>
+                <hr class="my-4">
+
+                <div class="d-flex justify-content-between mb-4">
+                    <h5 class="text-uppercase">Items <span id="itemsTotal">0</span></h5>
+                    <h5 id="totalPrice">€ 0.00</h5>
+                </div>
+
+                <h5 class="text-uppercase mb-3">Shipping</h5>
+                <div class="mb-4">
+                    <select class="form-select" id="shippingOption" style="border-radius: .375rem; padding: .5rem;">
+                        <option value="5">Standard Delivery - €5.00</option>
+                        <option value="10">Two-Day Delivery - €10.00</option>
+                        <option value="15">Overnight Delivery - €15.00</option>
+                    </select>
+                </div>
+
+                <h5 class="text-uppercase mb-3">Promo Code</h5>
+                <div class="mb-5">
+                    <input type="text" class="form-control form-control-lg" id="promoCodeInput" placeholder="Enter your code" style="border-radius: .375rem;">
+                </div>
+
+                <hr class="my-4">
+
+                <div class="d-flex justify-content-between mb-5">
+                    <h5 class="text-uppercase">Total Price</h5>
+                    <h5 id="finalTotalPrice">€ 0.00</h5>
+                </div>
+
+                <button type="button" class="btn btn-dark btn-block btn-lg" style="border-radius: .375rem; padding: .75rem 1.25rem;">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ... (ابقى الأنماط كما هي بدون تغيير) ... */
+</style>
+
+<script src="/js/LocalStorage.js"></script>

@@ -1,55 +1,120 @@
 ﻿@model PageTurner.Models.ViewModels.AddBookViewModel
 
 @{
-    SelectList selects = new SelectList(Model.Authors, "ID", "Name");
+    var isEdit = Model.ID > 0;
+    var formAction = isEdit ? "Edit" : "Create";
+    ViewData["Title"] = isEdit ? "Editing Book" : "Adding New Book";
 }
 
-
-<h4>Book</h4>
+<h2>@(isEdit ? "Editing Book" : "Adding New Book")</h2>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger" style="display: none;"></div>
+        <form asp-action="@formAction" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger" style="display: none;"></div>
+
+            @if(isEdit)
+            {
+                <input type="hidden" asp-for="ID" />
+                <input type="hidden" asp-for="Image" />
+            }
+
             <div class="form-group">
                 <label asp-for="ISBN" class="control-label"></label>
                 <input asp-for="ISBN" class="form-control" />
                 <span asp-validation-for="ISBN" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label>
                 <input type="file" asp-for="ImageFile" class="form-control" />
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
+                @if(isEdit && !string.IsNullOrEmpty(Model.Image))
+                {
+                    <br />
+                    <label>Current Image:</label><br />
+                    <img src="~/uploads/@Model.Image" alt="Book Image" width="100" height="150" class="mb-2" />
+                }
             </div>
+
             <div class="form-group">
-                <label for="authorId" class="control-label">Select Author</label>
-                <div id="authorList">
-                    @foreach (var author in Model.Authors)
+                <label for="SelectedAuthors">Select Author or more</label>
+                <select class="form-select shadow-sm border-primary rounded-3" id="Authors" asp-for="SelectedAuthors" name="SelectedAuthors" multiple>
+                    @foreach (var Author in Model.Authors)
                     {
-                        <div class="form-check">
-                            <input type="checkbox" name="AuthorIds" value="@author.ID" class="form-check-input" id="author_@author.ID" />
-                            <label class="form-check-label" for="author_@author.ID">@author.Name</label>
-                        </div>
+                        <option value="@Author.AuthorId" selected="@(Model.SelectedAuthors.Contains(Author.AuthorId) ? "selected" : null)">
+                            @Author.AuthorName
+                        </option>
                     }
-                </div>
+                </select>
+                <span class="text-danger" asp-validation-for="SelectedAuthors"></span>
+                <br />
+                <p class="p-3">Wanna create Author before?</p>
+                <a asp-action="Create" asp-controller="Authors" class="btn btn-success">Add new Author</a>
             </div>
+
+            <div class="form-group">
+                <label for="SelectedCategories">Select Category or more</label>
+                <select class="form-select shadow-sm border-primary rounded-3" id="Categories" asp-for="SelectedCategories" name="SelectedCategories" multiple>
+                    @foreach (var Category in Model.Categories)
+                    {
+                        <option value="@Category.ID" selected="@(Model.SelectedCategories.Contains(Category.ID) ? "selected" : null)">
+                            @Category.Title
+                        </option>
+                    }
+                </select>
+                <span class="text-danger" asp-validation-for="SelectedCategories"></span>
+                <br />
+                <p class="p-3">Wanna create Category before?</p>
+                <a asp-action="Create" asp-controller="Categories" class="btn btn-success">Add new Category</a>
+            </div>
+
             <div class="form-group">
                 <label asp-for="Title" class="control-label"></label>
                 <input asp-for="Title" class="form-control" />
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="Descreption" class="control-label"></label>
                 <input asp-for="Descreption" class="form-control" />
                 <span asp-validation-for="Descreption" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label for="SelectedPublisher">Select Publisher</label>
+                <select class="form-select shadow-sm border-success rounded-3" asp-for="SelectedPublisher" id="Publishers" name="SelectedPublisher">
+                    @foreach(var publisher in Model.Publishers)
+                    {
+                        <option value="@publisher.PublisherID" selected="@(Model.SelectedPublisher == publisher.PublisherID ? "selected" : null)">
+                            @publisher.PublisherName
+                        </option>
+                    }
+                </select>
+                <p class="p-3">Wanna create Publisher before?</p>
+                <a asp-action="Add" asp-controller="Publishers" class="btn btn-success">Add new Publisher</a>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Pages" class="control-label"></label>
+                <input asp-for="Pages" class="form-control" />
+                <span asp-validation-for="Pages" class="text-danger"></span>
+            </div> 
+
+            <div class="form-group">
+                <label asp-for="Formula" class="control-label"></label>
+                <input asp-for="Formula" class="form-control" />
+                <span asp-validation-for="Formula" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="@(isEdit ? "Save Changes" : "Create")" class="btn btn-primary" />
             </div>
         </form>
     </div>
@@ -59,3 +124,74 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@4.0.1/dist/js/multi-select-tag.min.js"></script>
+<script>
+    var authorsSelector = new MultiSelectTag('Authors', {              
+        required: true,                
+        placeholder: 'Select authors',
+        selected: @Html.Raw(Json.Serialize(Model.SelectedAuthors))
+    });
+    var categoriesSelector = new MultiSelectTag('Categories', {
+        required: true,
+        placeholder: 'Select Categories',
+        selected: @Html.Raw(Json.Serialize(Model.SelectedCategories))
+    });
+</script>
+
+<style>
+    .multi-select-tag {
+        border: 2px solid #007bff !important;
+        border-radius: 8px !important;
+        background-color: #f8f9fa !important;
+        padding: 8px !important;
+        font-size: 16px !important;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+    .multi-select-tag .wrapper {
+        border-radius: 6px !important;
+        background-color: #ffffff !important;
+    }
+
+    .multi-select-tag .input-container {
+        padding: 5px !important;
+        font-size: 16px !important;
+        color: #333 !important;
+    }
+
+    .multi-select-tag .tag {
+        background-color: #007bff !important;
+        color: #fff !important;
+        border-radius: 5px !important;
+        padding: 5px 10px !important;
+        margin: 3px !important;
+    }
+
+    .multi-select-tag .tag .remove-button {
+        color: #fff !important;
+        font-weight: bold !important;
+        margin-left: 5px !important;
+        cursor: pointer !important;
+    }
+
+    .multi-select-tag .options {
+        background: white !important;
+        border: 1px solid #007bff !important;
+        border-radius: 5px !important;
+        box-shadow: 0 5px 10px rgba(0, 123, 255, 0.2) !important;
+        max-height: 200px !important;
+        overflow-y: auto !important;
+    }
+
+    .multi-select-tag .option {
+        padding: 10px !important;
+        font-size: 16px !important;
+        cursor: pointer !important;
+        transition: background 0.2s !important;
+    }
+
+    .multi-select-tag .option:hover {
+        background-color: #007bff !important;
+        color: #fff !important;
+    }
+</style>

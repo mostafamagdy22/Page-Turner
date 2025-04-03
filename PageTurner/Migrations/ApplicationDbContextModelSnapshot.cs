@@ -22,6 +22,21 @@ namespace PageTurner.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BookCategory", b =>
+                {
+                    b.Property<int>("BooksID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoriesID")
+                        .HasColumnType("int");
+
+                    b.HasKey("BooksID", "CategoriesID");
+
+                    b.HasIndex("CategoriesID");
+
+                    b.ToTable("BookCategory");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -72,71 +87,6 @@ namespace PageTurner.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -220,6 +170,75 @@ namespace PageTurner.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("PageTurner.Models.ApplicationUser", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
             modelBuilder.Entity("PageTurner.Models.Author", b =>
                 {
                     b.Property<int>("ID")
@@ -235,8 +254,15 @@ namespace PageTurner.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -252,27 +278,41 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("PageTurner.Models.Book", b =>
                 {
-                    b.Property<string>("ISBN")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("Descreption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Formula")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ISBN")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Pages")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("PublisherID")
+                    b.Property<int>("PublisherID")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ISBN");
+                    b.HasKey("ID");
 
                     b.HasIndex("PublisherID");
 
@@ -281,17 +321,34 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("PageTurner.Models.BookAuthor", b =>
                 {
-                    b.Property<string>("BookISBN")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
 
                     b.Property<int>("AuthorID")
                         .HasColumnType("int");
 
-                    b.HasKey("BookISBN", "AuthorID");
+                    b.HasKey("BookID", "AuthorID");
 
                     b.HasIndex("AuthorID");
 
                     b.ToTable("bookAuthors");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.Category", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("PageTurner.Models.Order", b =>
@@ -325,9 +382,8 @@ namespace PageTurner.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("BookISBN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
@@ -340,7 +396,7 @@ namespace PageTurner.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookISBN");
+                    b.HasIndex("BookID");
 
                     b.HasIndex("OrderId");
 
@@ -371,6 +427,49 @@ namespace PageTurner.Migrations
                     b.ToTable("Publishers");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.Review", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReviewContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("BookID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("Reviews");
+                });
+
+            modelBuilder.Entity("BookCategory", b =>
+                {
+                    b.HasOne("PageTurner.Models.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BooksID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PageTurner.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -382,7 +481,7 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("PageTurner.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -391,7 +490,7 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("PageTurner.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -406,7 +505,7 @@ namespace PageTurner.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("PageTurner.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -415,7 +514,7 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
+                    b.HasOne("PageTurner.Models.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -424,9 +523,13 @@ namespace PageTurner.Migrations
 
             modelBuilder.Entity("PageTurner.Models.Book", b =>
                 {
-                    b.HasOne("PageTurner.Models.Publisher", null)
+                    b.HasOne("PageTurner.Models.Publisher", "Publisher")
                         .WithMany("Books")
-                        .HasForeignKey("PublisherID");
+                        .HasForeignKey("PublisherID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Publisher");
                 });
 
             modelBuilder.Entity("PageTurner.Models.BookAuthor", b =>
@@ -439,7 +542,7 @@ namespace PageTurner.Migrations
 
                     b.HasOne("PageTurner.Models.Book", "Book")
                         .WithMany("BookAuthors")
-                        .HasForeignKey("BookISBN")
+                        .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -452,7 +555,7 @@ namespace PageTurner.Migrations
                 {
                     b.HasOne("PageTurner.Models.Book", "Book")
                         .WithMany()
-                        .HasForeignKey("BookISBN")
+                        .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -467,6 +570,30 @@ namespace PageTurner.Migrations
                     b.Navigation("Order");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.Review", b =>
+                {
+                    b.HasOne("PageTurner.Models.Book", "book")
+                        .WithMany("Reviews")
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PageTurner.Models.ApplicationUser", "user")
+                        .WithMany("Reviews")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("book");
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.ApplicationUser", b =>
+                {
+                    b.Navigation("Reviews");
+                });
+
             modelBuilder.Entity("PageTurner.Models.Author", b =>
                 {
                     b.Navigation("BookAuthors");
@@ -475,6 +602,8 @@ namespace PageTurner.Migrations
             modelBuilder.Entity("PageTurner.Models.Book", b =>
                 {
                     b.Navigation("BookAuthors");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("PageTurner.Models.Order", b =>

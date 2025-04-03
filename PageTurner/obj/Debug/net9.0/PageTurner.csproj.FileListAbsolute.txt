@@ -217,7 +217,6 @@ D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets\
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.PageTurner.props
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.PageTurner.props
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets.pack.json
-D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\PageTurner.csproj.Up2Date
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\PageTurner.dll
 D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\refint\PageTurner.dll
@@ -341,3 +340,7 @@ D:\projects\MVC projects\PageTurner\PageTurner\bin\Debug\net9.0\ru\Microsoft.Cod
 D:\projects\MVC projects\PageTurner\PageTurner\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\projects\MVC projects\PageTurner\PageTurner\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 D:\projects\MVC projects\PageTurner\PageTurner\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\PageTurner.sourcelink.json
+D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\projects\MVC projects\PageTurner\PageTurner\bin\Debug\net9.0\AutoMapper.dll
+D:\projects\MVC projects\PageTurner\PageTurner\obj\Debug\net9.0\compressed\kpna0y7a4u-n35ugeflab.gz

@@ -35,9 +35,29 @@ namespace PageTurner.Services
 				return $"/{location}/{fileName}";
 			}
 			catch
-				{
+			{
 					return "problem";
+			}
+			}
+		public bool Delete(string fileName,string location)
+		{
+			if (fileName == null || fileName.Length == 0)
+				return false;
+
+			try
+			{
+				string imagePath = Path.Combine(_webHostEnvironment.WebRootPath, fileName.TrimStart('/'));
+				if (File.Exists(imagePath))
+				{
+					File.Delete(imagePath);
+					return true;
 				}
 			}
+			catch
+			{
+				return false;
+			}
+			return false;
+		}
 	}
 }

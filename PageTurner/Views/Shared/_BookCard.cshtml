@@ -1,25 +1,41 @@
-﻿@model Book
-@{
-    var isAdmin = ViewData["isAdmin"] as bool? ?? false;
-}
+﻿@model PageTurner.Models.ViewModels.BookCardViewModel
 
 <div class="col-md-4 mb-4">
     <div class="card">
-        <img src="@Model.Image" class="card-img-top" alt="@Model.Title" style="height: 200px; object-fit: cover;">
+        <img src="@Model.Image" onerror="this.onerror=null; this.src='/images/Books/default.jpg';" class="card-img-top" alt="@Model.Title" style="height: 200px; object-fit: cover;">
         <div class="card-body">
             <h5 class="card-title">@Model.Title</h5>
-            <p class="card-text">@Model.Descreption</p>
             <p class="card-text">
                 <small class="text-muted">
                     By @string.Join(", ", Model.BookAuthors.Select(ba => ba.Author.Name))
                 </small>
             </p>
-            <a asp-controller="Books" asp-action="Details" asp-route-isbn="@Model.ISBN">Details</a>
-            @if (isAdmin)
+            <p>
+                <small class="text-muted">
+                    Categories: @string.Join(",",Model.BookCategories.Select(bc => bc.Category.Title))
+                </small>
+            </p>
+            <p>
+                @Model.Price.ToString("C")
+            </p>
+            <a asp-controller="Books" asp-action="Details" asp-route-id="@Model.ID">Details</a>
+            @if (User.IsInRole("Admin"))
             {
-                <a asp-controller="Books" asp-action="Edit" asp-route-isbn="@Model.ISBN" class="btn btn-warning btn-sm">Edit</a>
-                <a asp-controller="Books" asp-action="Delete" asp-route-isbn="@Model.ISBN" class="btn btn-danger btn-sm">Delete</a>
+                <a asp-controller="Books" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-warning btn-sm">Edit</a>
+                <a asp-controller="Books" asp-action="Delete" asp-route-id="@Model.ID" class="btn btn-danger btn-sm">Delete</a>
             }
+            <button class="btn btn-outline-primary add-to-cart"
+                    data-id="@Model.ID"
+                    data-title="@Model.Title"
+                    data-price="@Model.Price"
+                    data-image="@Model.Image"
+                    data-authors="@Html.Raw(Json.Serialize(Model.BookAuthors.Select(ba => ba.Author.Name)))"
+                    data-publisher="@Model.Publisher?.Name"
+                    data-categories="@Html.Raw(Json.Serialize(Model.BookCategories.Select(bc => bc.Category.Title)))">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
         </div>
     </div>
 </div>
+
+<script src="/js/LocalStorage.js"></script>

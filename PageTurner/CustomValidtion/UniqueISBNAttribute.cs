@@ -8,6 +8,13 @@ namespace PageTurner.CustomValidtion
 	{
 		protected override ValidationResult IsValid(object value, ValidationContext validationContext)
 		{
+
+			var httpContextAccessor = (IHttpContextAccessor)validationContext.GetService(typeof(IHttpContextAccessor));
+			var actionName = httpContextAccessor.HttpContext?.Request.RouteValues["action"]?.ToString();
+			
+			if (actionName == "Edit")
+				return ValidationResult.Success;
+
 			if (value == null)
 				return ValidationResult.Success;
 

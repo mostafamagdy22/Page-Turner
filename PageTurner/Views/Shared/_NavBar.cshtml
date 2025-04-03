@@ -1,0 +1,83 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PageTurner</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Authors</a>
+                </li>
+                @if(User.IsInRole("Admin"))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Roles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Account" asp-action="AddAdmin">Add Admin</a>
+                    </li>
+                }            
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <i class="bi bi-cart cart-icon" id="cartIcon"></i>
+                @if (SignInManager.IsSignedIn(User))
+                {
+                    <div class="dropdown ms-auto">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User" width="30">
+                            @User.Identity.Name
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a asp-controller="Profile" asp-action="" class="dropdown-item">Profile</a></li>
+                            <li><a class="dropdown-item">Settings</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a asp-controller="Account" asp-action="Logout" class="dropdown-item text-danger">Logout</a></li>
+                        </ul>
+                    </div>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Account" asp-action="Register">
+                            Register
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Account" asp-action="Login">
+                            Login
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<style>
+    .cart-icon {
+        font-size: 24px; 
+        color: #007bff; 
+        transition: transform 0.3s ease, color 0.3s ease;
+        margin-right: 20px;
+    }
+
+        .cart-icon:hover {
+            color: #ff5722; 
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+</style>
+
+<script>
+      document.getElementById("cartIcon").addEventListener("click", function() {
+      window.location.href = "cart.html"; 
+    });
+</script>

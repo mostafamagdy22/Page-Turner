@@ -28,8 +28,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/projects/MVC projects/PageTurner/PageTurner/Views/Authors/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xBZGQuY3NodG1s
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Account/AddAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZGRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Authors/CreateUpdate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xDcmVhdGVVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Authors/Index.cshtml]
@@ -48,12 +60,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Cart/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Roles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Roles/New.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcTmV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Shared/Error.cshtml]
@@ -66,6 +94,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Shared/_BookCard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Cb29rQ2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/projects/MVC projects/PageTurner/PageTurner/Views/Shared/_NavBar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/projects/MVC projects/PageTurner/PageTurner/Views/Shared/_ValidationScriptsPartial.cshtml]

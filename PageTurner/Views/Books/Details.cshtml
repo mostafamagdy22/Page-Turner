@@ -1,42 +1,83 @@
 ﻿@model PageTurner.Models.Book
 
-<div>
-    <h4>Book</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ISBN)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ISBN)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Image)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Descreption)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Descreption)
-        </dd>
-    </dl>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Images -->
+        <div class="col-md-6 mb-4">
+            <img src="@(Model.Image != null ? Model.Image : "images/Books/default.jpg")" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="mb-3">@Model.Title</h2>
+            <p class="text-muted mb-4">SKU: WH1000XM4</p>
+            <div class="mb-3">
+                <span class="h4 me-2">@Model.Price.ToString("c")</span>
+            </div>
+           @*  <div class="mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <span class="ms-2">4.5 (120 reviews)</span>
+            </div> *@
+            <p class="mb-2 lead">Descreption: </p>
+            <p class="mb-4">
+                @Model.Descreption
+            </p>
+            <div class="mb-4">
+                <label for="quantity" class="form-label">Quantity:</label>
+                <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+            </div>
+            <button class="btn btn-primary add-to-cart"
+                    data-id="@Model.ID"
+                    data-title="@Model.Title"
+                    data-price="@Model.Price"
+                    data-image="@Model.Image"
+                    data-authors="@Html.Raw(Json.Serialize(Model.BookAuthors.Select(ba => ba.Author.Name).ToList()))"
+                    data-publisher="@Model.Publisher.Name"
+                    data-categories="@Html.Raw(Json.Serialize(Model.BookCategories.Select(bc => bc.Category.Title).ToList()))">
+                <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="btn btn-outline-secondary btn-lg mb-3">
+                <i class="bi bi-heart"></i> Add to Wishlist
+            </button>
+            <div class="mt-4">
+                <h5>Key Features:</h5>
+                <ul>
+                    <li>Industry-leading noise cancellation</li>
+                    <li>30-hour battery life</li>
+                    <li>Touch sensor controls</li>
+                    <li>Speak-to-chat technology</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/LocalStorage.js">
+</script>
+
+
+<style>
+    .product-image {
+        max-height: 400px;
+        object-fit: cover;
+    }
+
+    .thumbnail {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: opacity 0.3s ease;
+    }
+
+        .thumbnail:hover, .thumbnail.active {
+            opacity: 1;
+        }
+</style>       

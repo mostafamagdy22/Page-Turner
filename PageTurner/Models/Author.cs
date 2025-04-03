@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PageTurner.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace PageTurner.Models
 {
@@ -11,6 +12,8 @@ namespace PageTurner.Models
 		public string Descreption { get; set; }
 		public string? Nationality { get; set; }
 		public string? Image { get; set; }
+		public bool IsDeleted { get; set; } = false;
+		public Gender Gender { get; set; }
 		public List<BookAuthor> BookAuthors { get; set; } = new();
 	}
 }

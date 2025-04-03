@@ -2,8 +2,9 @@
 
 namespace PageTurner.Models
 {
-	public class ApllicationUser : IdentityUser
+	public class ApplicationUser : IdentityUser
 	{
 		public string Address { get; set; }
+		public virtual ICollection<Review> Reviews { get; set; }
 	}
 }
