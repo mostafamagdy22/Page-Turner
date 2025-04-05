@@ -128,5 +128,11 @@ namespace PageTurner.Controllers
 			}
 			return BadRequest();
 		}
-    }
+        [HttpGet]
+        public async Task<IActionResult> Details(int id)
+		{
+			Author author = await _authorRepository.GetAuthorByIDWithBooksAsync(id);
+			return View(author);
+		}
+	}
 }

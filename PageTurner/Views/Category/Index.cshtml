@@ -1,0 +1,18 @@
+﻿@model PageTurner.Models.ViewModels.CategoryBooksViewModel
+
+<h2>
+    @Model.CategoryName
+</h2>
+
+<div class="row">
+    @foreach (var book in Model.Books)
+    {
+        @await Html.PartialAsync("_BookCard", book)
+    }
+
+    @await Html.PartialAsync("_PaginationNav", new PagintionViewModel 
+    { CurrentPage = Model.PagintionViewModel.CurrentPage, TotalPages = Model.PagintionViewModel.TotalPages,
+        ControllerName = "Category",
+    ActionName = "Index",
+    })
+</div>

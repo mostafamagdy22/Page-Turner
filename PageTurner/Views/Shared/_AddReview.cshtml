@@ -1,0 +1,45 @@
+﻿@model CreateReviewViewModel
+
+<form asp-action="Create" asp-controller="Review" method="post" class="p-4 rounded shadow-sm bg-light">
+    <h4 class="mb-3">Leave a Review</h4>
+    <input type="hidden" asp-for="BookID"></input>
+
+
+    <!-- Rating -->
+    <div class="mb-3">
+        <label class="form-label">Rating</label>
+        <div class="rating">
+            <input type="radio" name="Rating" id="star5" value="5" class="d-none" />
+            <label for="star5" class="text-warning fs-4 me-1">★</label>
+            <input type="radio" name="Rating" id="star4" value="4" class="d-none" />
+            <label for="star4" class="text-warning fs-4 me-1">★</label>
+            <input type="radio" name="Rating" id="star3" value="3" class="d-none" />
+            <label for="star3" class="text-warning fs-4 me-1">★</label>
+            <input type="radio" name="Rating" id="star2" value="2" class="d-none" />
+            <label for="star2" class="text-warning fs-4 me-1">★</label>
+            <input type="radio" name="Rating" id="star1" value="1" class="d-none" />
+            <label for="star1" class="text-warning fs-4 me-1">★</label>
+        </div>
+    </div>
+
+    <!-- Review Text -->
+    <div class="mb-3">
+        <label for="reviewText" class="form-label">Your Review</label>
+        <textarea asp-for="@Model.ReviewContent" class="form-control" id="reviewText" rows="4" placeholder="Write your thoughts here..."></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>
+
+<style>
+    .rating label:hover,
+    .rating label:hover ~ label {
+        color: #ffc107 !important;
+        cursor: pointer;
+    }
+
+    .rating input:checked ~ label {
+        color: #ffc107;
+    }
+</style>

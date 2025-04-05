@@ -11,7 +11,15 @@
 
         <div class="col-md-6">
             <h2 class="mb-3">@Model.Title</h2>
-            <p class="text-muted mb-4">SKU: WH1000XM4</p>
+            <p class="text-muted mb-4">Categories:</p>
+            <ul class="list-inline mb-4">
+                @foreach (var category in Model.BookCategories.Select(bc => bc.Category))
+                {
+                    <li class="list-inline-item">
+                        <a asp-controller="Category" asp-action="Index" asp-route-id="@category.ID">@category.Title</a>
+                    </li>
+                }
+            </ul>
             <div class="mb-3">
                 <span class="h4 me-2">@Model.Price.ToString("c")</span>
             </div>
@@ -45,17 +53,21 @@
                 <i class="bi bi-heart"></i> Add to Wishlist
             </button>
             <div class="mt-4">
-                <h5>Key Features:</h5>
+                <h5>By:</h5>
                 <ul>
-                    <li>Industry-leading noise cancellation</li>
-                    <li>30-hour battery life</li>
-                    <li>Touch sensor controls</li>
-                    <li>Speak-to-chat technology</li>
+                    @foreach (Author author in Model.BookAuthors.Select(ba => ba.Author))
+                    {
+                        <li>
+                            <a asp-controller="Authors" asp-action="Details" asp-route-id="@author.ID">@author.Name</a>
+                        </li>
+                    }
                 </ul>
+                <a asp-action="Create" asp-controller="Review" asp-route-id="@Model.ID" class="btn btn-success">Add Review</a>
             </div>
         </div>
     </div>
 </div>
+@await Html.PartialAsync("_RecommendtionBar",Model)
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/LocalStorage.js">

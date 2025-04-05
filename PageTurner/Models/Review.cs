@@ -9,11 +9,9 @@ namespace PageTurner.Models
 		[Required]
 		public string ReviewContent { get; set; }
 		[ForeignKey("user")]
-		[Required]
 		public string UserID { get; set; }
 		public ApplicationUser user { get; set; }
 		[ForeignKey("book")]
-		[Required]
 		public int BookID { get; set; }
 		public Book book { get; set; }
 	}

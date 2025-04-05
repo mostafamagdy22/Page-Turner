@@ -26,8 +26,8 @@ namespace PageTurner.Services.Mappings
 
 			CreateMap<Book, BookCardViewModel>();
 
-			CreateMap<Author,SelectableAuthorViewModel>().ForMember(dest => dest.AuthorId,opt => opt.MapFrom(src => src.ID))
-				.ForMember(dest => dest.AuthorName,opt => opt.MapFrom(src => src.Name))
+			CreateMap<Author, SelectableAuthorViewModel>().ForMember(dest => dest.AuthorId, opt => opt.MapFrom(src => src.ID))
+				.ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Name))
 				.ReverseMap();
 
 			CreateMap<Author, AddAuthorViewModel>().ReverseMap();
@@ -36,6 +36,8 @@ namespace PageTurner.Services.Mappings
 				.ForMember(dest => dest.PublisherID, opt => opt.MapFrom(src => src.ID))
 				.ForMember(dest => dest.PublisherName, opt => opt.MapFrom(src => src.Name))
 				.ReverseMap();
+
+			CreateMap<Review,CreateReviewViewModel>().ReverseMap();
 		}
 	}
 }

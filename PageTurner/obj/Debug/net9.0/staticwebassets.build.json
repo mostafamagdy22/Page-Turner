@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TFI2q7W3QVOPMkYgwzit1a2/mbXwoTSfWZLTC848Un8=",
+  "Hash": "gnxSqG0WDJOYLWqZvWWM42azedgzO0T3bPfFXKvIAWw=",
   "Source": "PageTurner",
   "BasePath": "_content/PageTurner",
   "Mode": "Default",
@@ -1611,6 +1611,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Authors\\c9c34817-b5cc-40c6-acf8-e38d2e0fdaf7.jpg"
+    },
+    {
+      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\images\\Authors\\cff976f0-a33f-4419-a038-61891192a860.png",
+      "SourceId": "PageTurner",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\",
+      "BasePath": "_content/PageTurner",
+      "RelativePath": "images/Authors/cff976f0-a33f-4419-a038-61891192a860#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hjp14macz1",
+      "Integrity": "jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Authors\\cff976f0-a33f-4419-a038-61891192a860.png"
     },
     {
       "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\images\\Authors\\defaultFemale.jpg",
@@ -4419,6 +4440,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-fO6ULqNhWBwBd2qmvfseP/cBwxNAa9kr2A+mJ8OFC/g="
+        }
+      ]
+    },
+    {
+      "Route": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.hjp14macz1.png",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\images\\Authors\\cff976f0-a33f-4419-a038-61891192a860.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1295811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:54:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hjp14macz1"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU="
+        }
+      ]
+    },
+    {
+      "Route": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\images\\Authors\\cff976f0-a33f-4419-a038-61891192a860.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1295811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:54:52 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU="
         }
       ]
     },

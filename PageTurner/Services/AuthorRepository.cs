@@ -35,7 +35,11 @@ namespace PageTurner.Repositories
 		{
 			return await _context.Authors.FirstOrDefaultAsync(a => a.ID == id);
 		}
-
+		public async Task<Author> GetAuthorByIDWithBooksAsync(int id)
+		{
+			return await _context.Authors.Include(a => a.BookAuthors).ThenInclude(ba => ba.Book)
+										 .FirstOrDefaultAsync(a => a.ID == id);
+		}
 		public async Task<bool> DeleteAuthorAsync(Author author)
 		{
 			if (author == null) return false;

@@ -1471,6 +1471,88 @@
       ]
     },
     {
+      "Route": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.hjp14macz1.png",
+      "AssetFile": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1295811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:54:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hjp14macz1"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU="
+        },
+        {
+          "Name": "label",
+          "Value": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png"
+        }
+      ]
+    },
+    {
+      "Route": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png",
+      "AssetFile": "images/Authors/cff976f0-a33f-4419-a038-61891192a860.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1295811"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 03 Apr 2025 04:54:52 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jXN66pfVEFRdQ7nMSgXPPirXrn4nftQjKmDifqXFFtU="
+        }
+      ]
+    },
+    {
       "Route": "images/Authors/defaultFemale.jpg",
       "AssetFile": "images/Authors/defaultFemale.jpg",
       "Selectors": [],

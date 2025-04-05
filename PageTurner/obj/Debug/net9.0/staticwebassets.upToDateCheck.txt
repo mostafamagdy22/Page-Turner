@@ -70,6 +70,7 @@ wwwroot\images\Authors\9fab0510-363c-4cdc-a55c-f5da65c8bcf8.jpg
 wwwroot\images\Authors\a0965212-9e02-42a4-9aed-370f1b59114a.jpg
 wwwroot\images\Authors\beea4b8d-0a53-49c7-96f6-a16176f4f99b.jpg
 wwwroot\images\Authors\c9c34817-b5cc-40c6-acf8-e38d2e0fdaf7.jpg
+wwwroot\images\Authors\cff976f0-a33f-4419-a038-61891192a860.png
 wwwroot\images\Authors\defaultFemale.jpg
 wwwroot\images\Authors\defaultMale.jpg
 wwwroot\images\Books\0876d6ba-cb85-49a0-ad9a-4befca7bd4d2.jpg

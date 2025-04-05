@@ -13,5 +13,6 @@ namespace PageTurner.Repositories.Interfaces
 		public Task<IEnumerable<string>> GetAuthorsNamesAsync();
 		public Task<IEnumerable<SelectableAuthorViewModel>> selectableAuthorViewModelsAsync();
 		public Task<(bool result,string image)> UpdateAuthorAsync(Author author);
+		public Task<Author> GetAuthorByIDWithBooksAsync(int id);
 	}
 }

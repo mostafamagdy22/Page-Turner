@@ -20,6 +20,7 @@ builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 builder.Services.AddScoped<IPublisherRepository, PublisherRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
