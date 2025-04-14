@@ -8,6 +8,7 @@ namespace PageTurner.Models
 		[Key]
 		public int ID { get; set; }
 		public string Name { get; set; }
+		[Display(Name = "Date of Birth")]
 		public DateTime DateOfBirth { get; set; }
 		public string Descreption { get; set; }
 		public string? Nationality { get; set; }

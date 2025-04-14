@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gnxSqG0WDJOYLWqZvWWM42azedgzO0T3bPfFXKvIAWw=",
+  "Hash": "P+dUCxRUKQdNthTv5Sce2j00lqfKw03kcpsLUiekBNs=",
   "Source": "PageTurner",
   "BasePath": "_content/PageTurner",
   "Mode": "Default",
@@ -773,12 +773,12 @@
       "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\PageTurner.bundle.scp.css"
     },
     {
-      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-n35ugeflab.gz",
+      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
       "SourceId": "PageTurner",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/PageTurner",
-      "RelativePath": "js/LocalStorage#[.{fingerprint=n35ugeflab}]?.js.gz",
+      "RelativePath": "js/LocalStorage#[.{fingerprint=uy92onuawn}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -787,8 +787,8 @@
       "RelatedAsset": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "dl1eddelgi",
-      "Integrity": "b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc=",
+      "Fingerprint": "l8rdo01q1o",
+      "Integrity": "24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js"
@@ -1984,8 +1984,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "n35ugeflab",
-      "Integrity": "rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo=",
+      "Fingerprint": "uy92onuawn",
+      "Integrity": "9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\LocalStorage.js"
@@ -5839,12 +5839,12 @@
     },
     {
       "Route": "js/LocalStorage.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-n35ugeflab.gz",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000519750520"
+          "Quality": "0.000492125984"
         }
       ],
       "ResponseHeaders": [
@@ -5854,15 +5854,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1923"
+          "Value": "2031"
         },
         {
           "Name": "ETag",
-          "Value": "\"b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc=\""
+          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5882,13 +5882,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo=\""
+          "Value": "W/\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo="
+          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
         }
       ]
     },
@@ -5903,7 +5903,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6679"
+          "Value": "6974"
         },
         {
           "Name": "Content-Type",
@@ -5911,11 +5911,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo=\""
+          "Value": "\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5925,13 +5925,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo="
+          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
         }
       ]
     },
     {
       "Route": "js/LocalStorage.js.gz",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-n35ugeflab.gz",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5940,7 +5940,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1923"
+          "Value": "2031"
         },
         {
           "Name": "Content-Type",
@@ -5948,11 +5948,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc=\""
+          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5970,18 +5970,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc="
+          "Value": "sha256-24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.n35ugeflab.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-n35ugeflab.gz",
+      "Route": "js/LocalStorage.uy92onuawn.js",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000519750520"
+          "Quality": "0.000492125984"
         }
       ],
       "ResponseHeaders": [
@@ -5991,15 +5991,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1923"
+          "Value": "2031"
         },
         {
           "Name": "ETag",
-          "Value": "\"b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc=\""
+          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6019,13 +6019,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo=\""
+          "Value": "W/\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n35ugeflab"
+          "Value": "uy92onuawn"
         },
         {
           "Name": "label",
@@ -6033,12 +6033,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo="
+          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.n35ugeflab.js",
+      "Route": "js/LocalStorage.uy92onuawn.js",
       "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6048,7 +6048,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6679"
+          "Value": "6974"
         },
         {
           "Name": "Content-Type",
@@ -6056,11 +6056,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo=\""
+          "Value": "\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6070,7 +6070,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n35ugeflab"
+          "Value": "uy92onuawn"
         },
         {
           "Name": "label",
@@ -6078,13 +6078,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rVLoDJwZMCDiSnTnLS52NgBb9TFuzX65e1F/g996/Yo="
+          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.n35ugeflab.js.gz",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-n35ugeflab.gz",
+      "Route": "js/LocalStorage.uy92onuawn.js.gz",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6093,7 +6093,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1923"
+          "Value": "2031"
         },
         {
           "Name": "Content-Type",
@@ -6101,11 +6101,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc=\""
+          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 03 Apr 2025 04:19:21 GMT"
+          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6123,7 +6123,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "n35ugeflab"
+          "Value": "uy92onuawn"
         },
         {
           "Name": "label",
@@ -6131,7 +6131,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b19Io8149iKdZtV1ogYmHpsZWzg/qCP8vOTKZahPbPc="
+          "Value": "sha256-24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo="
         }
       ]
     },

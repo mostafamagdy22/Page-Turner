@@ -22,21 +22,6 @@ namespace PageTurner.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BookCategory", b =>
-                {
-                    b.Property<int>("BooksID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoriesID")
-                        .HasColumnType("int");
-
-                    b.HasKey("BooksID", "CategoriesID");
-
-                    b.HasIndex("CategoriesID");
-
-                    b.ToTable("BookCategory");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -186,12 +171,21 @@ namespace PageTurner.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
+
+                    b.Property<int>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -334,6 +328,72 @@ namespace PageTurner.Migrations
                     b.ToTable("bookAuthors");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.BookCategories", b =>
+                {
+                    b.Property<int>("BookID")
+                        .HasColumnType("int")
+                        .HasColumnName("BooksID");
+
+                    b.Property<int>("CategoryID")
+                        .HasColumnType("int")
+                        .HasColumnName("CategoriesID");
+
+                    b.HasKey("BookID", "CategoryID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("BookCategory", (string)null);
+                });
+
+            modelBuilder.Entity("PageTurner.Models.Cart", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("UserID")
+                        .IsUnique();
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.CartItem", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CartID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("BookID");
+
+                    b.HasIndex("CartID");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("PageTurner.Models.Category", b =>
                 {
                     b.Property<int>("ID")
@@ -438,6 +498,9 @@ namespace PageTurner.Migrations
                     b.Property<int>("BookID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ReviewContent")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -455,19 +518,22 @@ namespace PageTurner.Migrations
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("BookCategory", b =>
+            modelBuilder.Entity("PageTurner.Models.UserCartItems", b =>
                 {
-                    b.HasOne("PageTurner.Models.Book", null)
-                        .WithMany()
-                        .HasForeignKey("BooksID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<string>("UserID")
+                        .HasColumnType("nvarchar(450)");
 
-                    b.HasOne("PageTurner.Models.Category", null)
-                        .WithMany()
-                        .HasForeignKey("CategoriesID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("BookID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserID", "BookID");
+
+                    b.HasIndex("BookID");
+
+                    b.ToTable("UserCartItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -551,6 +617,55 @@ namespace PageTurner.Migrations
                     b.Navigation("Book");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.BookCategories", b =>
+                {
+                    b.HasOne("PageTurner.Models.Book", "Book")
+                        .WithMany("BookCategories")
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PageTurner.Models.Category", "Category")
+                        .WithMany("BookCategories")
+                        .HasForeignKey("CategoryID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.Cart", b =>
+                {
+                    b.HasOne("PageTurner.Models.ApplicationUser", "User")
+                        .WithOne("Cart")
+                        .HasForeignKey("PageTurner.Models.Cart", "UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.CartItem", b =>
+                {
+                    b.HasOne("PageTurner.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PageTurner.Models.Cart", "Cart")
+                        .WithMany("CartItems")
+                        .HasForeignKey("CartID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Cart");
+                });
+
             modelBuilder.Entity("PageTurner.Models.OrderDetails", b =>
                 {
                     b.HasOne("PageTurner.Models.Book", "Book")
@@ -589,8 +704,30 @@ namespace PageTurner.Migrations
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.UserCartItems", b =>
+                {
+                    b.HasOne("PageTurner.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PageTurner.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PageTurner.Models.ApplicationUser", b =>
                 {
+                    b.Navigation("Cart")
+                        .IsRequired();
+
                     b.Navigation("Reviews");
                 });
 
@@ -603,7 +740,19 @@ namespace PageTurner.Migrations
                 {
                     b.Navigation("BookAuthors");
 
+                    b.Navigation("BookCategories");
+
                     b.Navigation("Reviews");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.Cart", b =>
+                {
+                    b.Navigation("CartItems");
+                });
+
+            modelBuilder.Entity("PageTurner.Models.Category", b =>
+                {
+                    b.Navigation("BookCategories");
                 });
 
             modelBuilder.Entity("PageTurner.Models.Order", b =>

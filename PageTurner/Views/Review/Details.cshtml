@@ -1,0 +1,19 @@
+﻿@model PageTurner.Models.ViewModels.ReviewDetailsViewModel
+
+<div class="container">
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">by @Model.UserName · @Model.CreatedAt</h6>
+
+
+            <p class="card-text">
+                @Model.ReviewContent
+            </p>
+
+            <hr>
+            <small class="text-muted">Book: @Model.BookName</small><br>
+            <a asp-controller="Books" asp-action="Details" asp-route-id="@Model.BookID" class="btn btn-success">Go to the Book</a>
+            <a asp-controller="Review" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-secondary">Edit Review</a>
+        </div>
+    </div>
+</div>

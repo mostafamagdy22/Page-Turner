@@ -1,5 +1,20 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    var user = await UserManager.GetUserAsync(User);
+    var gender = user?.Gender;
+    string imagePath = "";
+    if (gender.HasValue)
+    {
+        imagePath = gender switch
+        {
+            PageTurner.Enums.Gender.Male => "/images/Authors/defaultMale.jpg",
+            PageTurner.Enums.Gender.Female => "/images/Authors/defaultFemale.jpg",
+        };
+    }
+}
 
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     <div class="container-fluid">
@@ -32,11 +47,11 @@
                 {
                     <div class="dropdown ms-auto">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://via.placeholder.com/30" class="rounded-circle" alt="User" width="30">
+                            <img src="@imagePath" class="rounded-circle" alt="User" width="30">
                             @User.Identity.Name
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
-                            <li><a asp-controller="Profile" asp-action="" class="dropdown-item">Profile</a></li>
+                            <li><a asp-controller="Profile" asp-action="Index" class="dropdown-item">Profile</a></li>
                             <li><a class="dropdown-item">Settings</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a asp-controller="Account" asp-action="Logout" class="dropdown-item text-danger">Logout</a></li>

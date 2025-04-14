@@ -10,10 +10,23 @@ using PageTurner.Services.Mappings;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+var emailConfig = builder.Configuration.GetSection("EmailConfiguration")
+	.Get<EmailConfiguration>();
+
+
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("default")));
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddSession(options =>
+{
+	options.IdleTimeout = TimeSpan.FromMinutes(30);
+	options.Cookie.IsEssential = true;
+});
 
+builder.Services.AddSingleton(emailConfig);
+
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IBookRepository,BookRepository>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
 builder.Services.AddScoped<IFileService, FileService>();
@@ -21,6 +34,10 @@ builder.Services.AddScoped<IRolesRepository, RolesRepository>();
 builder.Services.AddScoped<IPublisherRepository, PublisherRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IReviewRepository, ReviewRepository>();
+builder.Services.AddScoped<IProfileRepository, ProfileRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+
+builder.Services.AddDistributedMemoryCache();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
@@ -45,6 +62,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();

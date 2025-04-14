@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using PageTurner.Models;
 using PageTurner.Models.ViewModels;
+using PageTurner.Services.Interfaces;
 using System.Threading.Tasks;
 
 namespace PageTurner.Controllers
@@ -13,10 +14,14 @@ namespace PageTurner.Controllers
     {
 		private readonly UserManager<ApplicationUser> _userManger;
         private readonly SignInManager<ApplicationUser> _signInManger;
-		public AccountController(UserManager<ApplicationUser> userManager,SignInManager<ApplicationUser> signInManager)
+        private readonly IEmailSender _emailSender;
+		private readonly ICartRepository _cartRepository;
+		public AccountController(ICartRepository cartRepository,IEmailSender emailSender,UserManager<ApplicationUser> userManager,SignInManager<ApplicationUser> signInManager)
 		{
 			_userManger = userManager;
             _signInManger = signInManager;
+			_emailSender = emailSender;
+			_cartRepository = cartRepository;
 		}
         [AllowAnonymous]
         [HttpGet]
@@ -107,7 +112,8 @@ namespace PageTurner.Controllers
                     if (isAuth)
                     {
                         await _signInManger.SignInAsync(user, model.RememberMe);
-                        return RedirectToAction("Index","Authors");
+                        await _cartRepository.SyncCartToDB(user.Id);
+						return RedirectToAction("Index","Authors");
                     }
                 }
                 ModelState.AddModelError("", "Email and password invalid");
@@ -116,10 +122,17 @@ namespace PageTurner.Controllers
             return View(model);
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await _signInManger.SignOutAsync();
             return RedirectToAction("Register");
         }
+        public IActionResult ForgetPassword()
+        {
+            var message = new Message(new string[] { "ttftf1782@gmail.com" }, "Test Email", "This is the content of the email");
+            _emailSender.SendEmail(message);
+			return Content("Email Sent");
+		}
 	}
 }

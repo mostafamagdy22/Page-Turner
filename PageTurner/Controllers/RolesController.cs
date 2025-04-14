@@ -24,15 +24,18 @@ namespace PageTurner.Controllers
             return View(roles);
         }
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult New()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> New(RoleViewModel newRoleVM)
         {
-            if (ModelState.IsValid)
+            ModelState.Remove("Id");
+			if (ModelState.IsValid)
             {
                 IdentityRole role = new IdentityRole();
                 role.Name = newRoleVM.RoleName;

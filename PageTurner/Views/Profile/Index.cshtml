@@ -1,0 +1,46 @@
+﻿@model PageTurner.Models.ViewModels.ProfileViewModel
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Profile Card -->
+        <div class="col-md-4">
+            <div class="card shadow text-center p-4">
+                <img src="@Model.Image"
+                     class="rounded-circle mb-3"
+                     style="width: 120px; height: 120px; object-fit: cover;"
+                     alt="@Model.UserName"
+                     onerror="this.onerror=null; this.src='/images/Users/default.jpg';" />
+                <h4>@Model.UserName</h4>
+                <p class="text-muted">@Model.Email</p>
+                <p class="small text-muted">Joined: @Model.CreatedAt.ToString("MMMM dd, yyyy")</p>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="col-md-8">
+            <h4 class="mb-4">My Reviews</h4>
+
+            @if (Model.Reviews != null && Model.Reviews.Any())
+            {
+                <div class="d-flex overflow-auto gap-3 pb-2" style="scroll-snap-type: x mandatory;">
+                    @foreach (var review in Model.Reviews)
+                    {
+                        <div class="card shadow-sm flex-shrink-0" style="min-width: 300px; scroll-snap-align: start;">
+                            <div class="card-body">
+                                <h5 class="card-title">@review.book.Title</h5>
+                                <p class="text-muted small">
+                                    Reviewed on: @review.CreatedAt.ToString("MMMM dd, yyyy")
+                                </p>
+                                <a asp-controller="Review" asp-action="Details" asp-route-id="@review.ID">Go To Review!</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info">You haven't written any reviews yet.</div>
+            }
+        </div>
+    </div>
+</div>

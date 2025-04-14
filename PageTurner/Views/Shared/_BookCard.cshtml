@@ -24,16 +24,12 @@
                 <a asp-controller="Books" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-warning btn-sm">Edit</a>
                 <a asp-controller="Books" asp-action="Delete" asp-route-id="@Model.ID" class="btn btn-danger btn-sm">Delete</a>
             }
-            <button class="btn btn-outline-primary add-to-cart"
-                    data-id="@Model.ID"
-                    data-title="@Model.Title"
-                    data-price="@Model.Price"
-                    data-image="@Model.Image"
-                    data-authors="@Html.Raw(Json.Serialize(Model.BookAuthors.Select(ba => ba.Author.Name)))"
-                    data-publisher="@Model.Publisher?.Name"
-                    data-categories="@Html.Raw(Json.Serialize(Model.BookCategories.Select(bc => bc.Category.Title)))">
+            <a class="btn btn-outline-primary add-to-cart"
+                    asp-action="AddToCart"
+                    asp-controller="Cart"
+                    asp-route-bookID="@Model.ID">
                 <i class="fas fa-cart-plus"></i> Add to Cart
-            </button>
+            </a>
         </div>
     </div>
 </div>

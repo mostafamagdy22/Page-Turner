@@ -14,5 +14,6 @@ namespace PageTurner.Models
 		[ForeignKey("book")]
 		public int BookID { get; set; }
 		public Book book { get; set; }
+		public DateTime CreatedAt { get; set; }
 	}
 }

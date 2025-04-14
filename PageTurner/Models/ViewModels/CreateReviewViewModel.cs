@@ -11,5 +11,6 @@ namespace PageTurner.Models.ViewModels
 		public string UserID { get; set; }
 		[Required]
 		public int BookID { get; set; }
+		public DateTime CreatedAt { get; set; } = DateTime.Now;
 	}
 }

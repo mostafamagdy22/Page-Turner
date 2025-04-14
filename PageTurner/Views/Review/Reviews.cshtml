@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Review>
+
+<div class="container mt-4">
+    <h3 class="mb-4">User Reviews</h3>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">No reviews yet.</div>
+    }
+    else
+    {
+        foreach (var review in Model)
+        {
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="card-title mb-1">@review.user?.UserName</h5>
+                        <small class="text-muted">@review.book?.Title</small>
+                    </div>
+
+
+                    <p class="card-text">@review.ReviewContent</p>
+                     <small class="text-muted">Posted on @review.CreatedAt.ToShortDateString()</small>
+                </div>
+            </div>
+        }
+    }
+</div>

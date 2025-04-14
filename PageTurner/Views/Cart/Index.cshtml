@@ -1,32 +1,25 @@
-﻿<section class="h-100 h-custom" style="background-color: #f4f7f6;">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-lg-8">
-                <div class="card card-registration card-registration-2 shadow-lg rounded-4">
-                    <div class="card-body p-0">
-                        <div class="row g-0">
-                            <div class="col-12">
-                                <div class="p-4">
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                        <h1 class="fw-bold mb-0" style="color: #3d3d3d;">Shopping Cart</h1>
-                                        <h6 class="mb-0 text-muted" id="itemCount">0 items</h6>
-                                    </div>
-                                    <hr class="my-4">
-                                    <div id="cartItemsContainer"></div>
+﻿@model List<CartItemViewModel>
 
-                                    <div class="pt-5">
-                                        <h6 class="mb-0">
-                                            <a asp-controller="Books" asp-action="Index" class="text-body" style="color: #6c757d;">
-                                                <i class="fas fa-long-arrow-alt-left me-2"></i>Back to Books
-                                            </a>
-                                        </h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="h-100 h-custom" style="background-color: #f4f7f6;">
+
+<h2>Your Cart</h2>
+
+@if (Model != null && Model.Any())
+{
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                    <strong>@item.BookTitle</strong> - @item.Quantity x @((item.Price * item.Quantity).ToString("C"))<br />
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+
 
             <!-- Right Panel for Summary -->
             <div class="col-lg-4 bg-light p-4 rounded-end mt-4 mt-lg-0">

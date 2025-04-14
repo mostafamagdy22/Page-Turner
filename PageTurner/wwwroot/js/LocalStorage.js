@@ -150,3 +150,15 @@ document.getElementById('shippingOption').addEventListener('change', getCartItem
 
 // التحميل الأولي
 document.addEventListener("DOMContentLoaded", getCartItems);
+
+function SaveCartToServerDebounced()
+{
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    await fetch("/Cart/Sync", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(cart)
+    });
+}

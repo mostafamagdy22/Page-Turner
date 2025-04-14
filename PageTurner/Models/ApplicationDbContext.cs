@@ -19,9 +19,15 @@ namespace PageTurner.Models
 		public DbSet<Category> Categories { get; set; }
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<BookCategories> BookCategories { get; set; }
+		public DbSet<UserCartItems> UserCartItems { get; set; }
+		public DbSet<Cart> Carts { get; set; }
+		public DbSet<CartItem> CartItems { get; set; }
 		protected override void OnModelCreating(ModelBuilder builder)
 		{
 			base.OnModelCreating(builder);
+
+			builder.Entity<UserCartItems>()
+				.HasKey(u => new {u.UserID,u.BookID});
 
 			builder.Entity<BookCategories>().ToTable("BookCategory");
 
@@ -82,6 +88,18 @@ namespace PageTurner.Models
 			.WithMany(a => a.BookCategories)
 			.HasForeignKey(ba => ba.CategoryID)
 			.OnDelete(DeleteBehavior.Restrict);
+
+			builder.Entity<ApplicationUser>()
+			.HasOne(u => u.Cart)
+			.WithOne(c => c.User)
+			.HasForeignKey<Cart>(c => c.UserID)
+			.OnDelete(DeleteBehavior.Cascade);
+
+			builder.Entity<Cart>()
+			.HasMany(c => c.CartItems)
+			.WithOne(ci => ci.Cart)
+			.HasForeignKey(ci => ci.CartID)
+			.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }

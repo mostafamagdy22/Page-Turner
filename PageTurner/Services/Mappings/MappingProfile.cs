@@ -38,6 +38,12 @@ namespace PageTurner.Services.Mappings
 				.ReverseMap();
 
 			CreateMap<Review,CreateReviewViewModel>().ReverseMap();
+
+			CreateMap<Review, ReviewDetailsViewModel>()
+				.ForMember(dest => dest.BookName, opt => opt.MapFrom(src => src.book.Title))
+				.ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.user.UserName))
+				.ForMember(dest => dest.CreatedAt, opt => opt.MapFrom(src => src.CreatedAt))
+				.ReverseMap();
 		}
 	}
 }
