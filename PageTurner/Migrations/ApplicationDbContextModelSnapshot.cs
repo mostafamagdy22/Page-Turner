@@ -205,6 +205,7 @@ namespace PageTurner.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
@@ -426,10 +427,19 @@ namespace PageTurner.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("UserID")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("ID");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Orders");
                 });
@@ -666,6 +676,17 @@ namespace PageTurner.Migrations
                     b.Navigation("Cart");
                 });
 
+            modelBuilder.Entity("PageTurner.Models.Order", b =>
+                {
+                    b.HasOne("PageTurner.Models.ApplicationUser", "User")
+                        .WithMany("Orders")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PageTurner.Models.OrderDetails", b =>
                 {
                     b.HasOne("PageTurner.Models.Book", "Book")
@@ -727,6 +748,8 @@ namespace PageTurner.Migrations
                 {
                     b.Navigation("Cart")
                         .IsRequired();
+
+                    b.Navigation("Orders");
 
                     b.Navigation("Reviews");
                 });

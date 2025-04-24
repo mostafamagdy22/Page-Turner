@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "P+dUCxRUKQdNthTv5Sce2j00lqfKw03kcpsLUiekBNs=",
+  "Hash": "McQ0TveYy5qEdD6pWPU+kFrBJsNzdGoHNahQD+3LmSk=",
   "Source": "PageTurner",
   "BasePath": "_content/PageTurner",
   "Mode": "Default",
@@ -246,6 +246,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\7i9j326jgp-2zv0a38pzj.gz",
+      "SourceId": "PageTurner",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/PageTurner",
+      "RelativePath": "js/cartActions#[.{fingerprint=2zv0a38pzj}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "0z7bvsh83u",
+      "Integrity": "5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js"
     },
     {
       "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\89imc3k0dp-bqjiyaj88i.gz",
@@ -771,27 +792,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\PageTurner.bundle.scp.css"
-    },
-    {
-      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
-      "SourceId": "PageTurner",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/PageTurner",
-      "RelativePath": "js/LocalStorage#[.{fingerprint=uy92onuawn}]?.js.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "l8rdo01q1o",
-      "Integrity": "24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js"
     },
     {
       "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\ldymezci28-0j3bgjxly4.gz",
@@ -1970,12 +1970,12 @@
       "OriginalItemSpec": "wwwroot\\images\\Books\\f575019f-c1a0-4eb2-b7d7-af0d84dbed81.jpg"
     },
     {
-      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
+      "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js",
       "SourceId": "PageTurner",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\",
       "BasePath": "_content/PageTurner",
-      "RelativePath": "js/LocalStorage#[.{fingerprint}]?.js",
+      "RelativePath": "js/cartActions#[.{fingerprint}]?.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -1984,11 +1984,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uy92onuawn",
-      "Integrity": "9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=",
+      "Fingerprint": "2zv0a38pzj",
+      "Integrity": "3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\LocalStorage.js"
+      "OriginalItemSpec": "wwwroot\\js\\cartActions.js"
     },
     {
       "Identity": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\site.js",
@@ -5838,13 +5838,13 @@
       ]
     },
     {
-      "Route": "js/LocalStorage.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
+      "Route": "js/cartActions.2zv0a38pzj.js",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\7i9j326jgp-2zv0a38pzj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000492125984"
+          "Quality": "0.000823723229"
         }
       ],
       "ResponseHeaders": [
@@ -5854,19 +5854,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2031"
+          "Value": "1213"
         },
         {
           "Name": "ETag",
-          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
+          "Value": "\"5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -5882,19 +5882,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
+          "Value": "W/\"3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0=\""
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "2zv0a38pzj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/cartActions.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
+          "Value": "sha256-3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
+      "Route": "js/cartActions.2zv0a38pzj.js",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5903,7 +5911,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6974"
+          "Value": "4461"
         },
         {
           "Name": "Content-Type",
@@ -5911,27 +5919,35 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
+          "Value": "\"3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         }
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "2zv0a38pzj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/cartActions.js"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
+          "Value": "sha256-3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.js.gz",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
+      "Route": "js/cartActions.2zv0a38pzj.js.gz",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\7i9j326jgp-2zv0a38pzj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5940,7 +5956,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2031"
+          "Value": "1213"
         },
         {
           "Name": "Content-Type",
@@ -5948,15 +5964,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
+          "Value": "\"5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "no-cache"
+          "Value": "max-age=31536000, immutable"
         },
         {
           "Name": "Content-Encoding",
@@ -5969,19 +5985,27 @@
       ],
       "EndpointProperties": [
         {
+          "Name": "fingerprint",
+          "Value": "2zv0a38pzj"
+        },
+        {
+          "Name": "label",
+          "Value": "js/cartActions.js.gz"
+        },
+        {
           "Name": "integrity",
-          "Value": "sha256-24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo="
+          "Value": "sha256-5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.uy92onuawn.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
+      "Route": "js/cartActions.js",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\7i9j326jgp-2zv0a38pzj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000492125984"
+          "Quality": "0.000823723229"
         }
       ],
       "ResponseHeaders": [
@@ -5991,19 +6015,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2031"
+          "Value": "1213"
         },
         {
           "Name": "ETag",
-          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
+          "Value": "\"5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -6019,27 +6043,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
+          "Value": "W/\"3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "uy92onuawn"
-        },
-        {
-          "Name": "label",
-          "Value": "js/LocalStorage.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
+          "Value": "sha256-3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.uy92onuawn.js",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
+      "Route": "js/cartActions.js",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6048,7 +6064,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6974"
+          "Value": "4461"
         },
         {
           "Name": "Content-Type",
@@ -6056,35 +6072,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws=\""
+          "Value": "\"3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "uy92onuawn"
-        },
-        {
-          "Name": "label",
-          "Value": "js/LocalStorage.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-9tJr9zb8DVtD39DDv0rLpW6+qtPa8KH+7S5sGoaS+ws="
+          "Value": "sha256-3pdsrw8omq8en6Xx2yMjEKfkAUhpqH8RS/TxG1T4si0="
         }
       ]
     },
     {
-      "Route": "js/LocalStorage.uy92onuawn.js.gz",
-      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\kpna0y7a4u-uy92onuawn.gz",
+      "Route": "js/cartActions.js.gz",
+      "AssetFile": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\obj\\Debug\\net9.0\\compressed\\7i9j326jgp-2zv0a38pzj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6093,7 +6101,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2031"
+          "Value": "1213"
         },
         {
           "Name": "Content-Type",
@@ -6101,15 +6109,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo=\""
+          "Value": "\"5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 06 Apr 2025 07:47:39 GMT"
+          "Value": "Fri, 18 Apr 2025 04:38:21 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -6122,16 +6130,8 @@
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "uy92onuawn"
-        },
-        {
-          "Name": "label",
-          "Value": "js/LocalStorage.js.gz"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-24w8wmK1ts6VVK4WWQaCIb+e6WLpLJr1wzLqM0nfjgo="
+          "Value": "sha256-5IOGJayChK+P/f0ERRy7H93RM7bhkc6on6ezGk/9CfQ="
         }
       ]
     },
@@ -24122,7 +24122,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24175,7 +24175,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24212,7 +24212,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24259,7 +24259,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24320,7 +24320,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24365,7 +24365,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24420,7 +24420,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24481,7 +24481,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24526,7 +24526,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24581,7 +24581,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24634,7 +24634,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24671,7 +24671,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 17 Mar 2025 02:12:44 GMT"
+          "Value": "Mon, 21 Apr 2025 07:27:31 GMT"
         },
         {
           "Name": "Cache-Control",

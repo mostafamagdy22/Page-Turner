@@ -95,11 +95,21 @@ namespace PageTurner.Models
 			.HasForeignKey<Cart>(c => c.UserID)
 			.OnDelete(DeleteBehavior.Cascade);
 
+			builder.Entity<CartItem>()
+			.Property(ci => ci.ID)
+			.ValueGeneratedOnAdd();
+
 			builder.Entity<Cart>()
 			.HasMany(c => c.CartItems)
 			.WithOne(ci => ci.Cart)
 			.HasForeignKey(ci => ci.CartID)
 			.OnDelete(DeleteBehavior.Cascade);
+
+			builder.Entity<ApplicationUser>()
+				.HasMany(u => u.Orders)
+				.WithOne(o => o.User)
+				.HasForeignKey(o => o.UserID)
+				.OnDelete(DeleteBehavior.Cascade);
 		}
 	}
 }

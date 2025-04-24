@@ -109,8 +109,8 @@
       "PackagePath": "staticwebassets\\images\\Books\\f575019f-c1a0-4eb2-b7d7-af0d84dbed81.jpg"
     },
     {
-      "Id": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\LocalStorage.js",
-      "PackagePath": "staticwebassets\\js\\LocalStorage.js"
+      "Id": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\cartActions.js",
+      "PackagePath": "staticwebassets\\js\\cartActions.js"
     },
     {
       "Id": "D:\\projects\\MVC projects\\PageTurner\\PageTurner\\wwwroot\\js\\site.js",

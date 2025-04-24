@@ -9,6 +9,7 @@ D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bo
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\js\site.js
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\jquery\dist\jquery.slim.min.map
+D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\js\cartActions.js
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
@@ -32,7 +33,6 @@ D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bo
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\js\LocalStorage.js
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
 D:\projects\MVC projects\PageTurner\PageTurner\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
@@ -87,7 +87,7 @@ wwwroot\images\Books\d95fe551-f09d-411e-a364-00b5559a8b23.jpg
 wwwroot\images\Books\da4f5c4b-5c54-443a-ba29-4bdf108f3728.jpg
 wwwroot\images\Books\default.jpg
 wwwroot\images\Books\f575019f-c1a0-4eb2-b7d7-af0d84dbed81.jpg
-wwwroot\js\LocalStorage.js
+wwwroot\js\cartActions.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

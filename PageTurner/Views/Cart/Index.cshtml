@@ -2,26 +2,32 @@
 
 <section class="h-100 h-custom" style="background-color: #f4f7f6;">
 
-<h2>Your Cart</h2>
+    <h2>Your Cart</h2>
 
-@if (Model != null && Model.Any())
-{
-    <ul>
+    @if (Model != null && Model.Any())
+    {
         @foreach (var item in Model)
         {
-            <li>
-                    <strong>@item.BookTitle</strong> - @item.Quantity x @((item.Price * item.Quantity).ToString("C"))<br />
-            </li>
+            <div id="@item.BookID" class="cart-item"
+                 data-bookID="@item.BookID"
+                 data-cartItemID="@(User.Identity.IsAuthenticated ? item.ID : null)"
+                 data-price="@item.Price">
+            <p>@item.BookTitle</p>
+                <input type="number"
+                       class="quantity-input"
+                       min="1"
+                       value="@item.Quantity"
+                       style="width: 60px;" />
+                <span>x @((item.Price * item.Quantity).ToString("C"))</span>
+                <button class="remove-btn">🗑️ Remove</button>
+             </div>
         }
-    </ul>
 }
 else
 {
     <p>Your cart is empty.</p>
 }
 
-
-            <!-- Right Panel for Summary -->
             <div class="col-lg-4 bg-light p-4 rounded-end mt-4 mt-lg-0">
                 <h3 class="fw-bold mb-5 mt-2 pt-1" style="color: #3d3d3d;">Summary</h3>
                 <hr class="my-4">
@@ -52,16 +58,18 @@ else
                     <h5 id="finalTotalPrice">€ 0.00</h5>
                 </div>
 
-                <button type="button" class="btn btn-dark btn-block btn-lg" style="border-radius: .375rem; padding: .75rem 1.25rem;">
+                <a asp-controller="Cart" asp-action="Checkout" class="btn btn-dark btn-block btn-lg" style="border-radius: .375rem; padding: .75rem 1.25rem;">
                     Checkout
-                </button>
+                </a>
             </div>
         </div>
     </div>
 </section>
 
-<style>
-    /* ... (ابقى الأنماط كما هي بدون تغيير) ... */
-</style>
+@Html.AntiForgeryToken()
 
-<script src="/js/LocalStorage.js"></script>
+<script src="/js/cartActions.js"></script>
+
+
+
+

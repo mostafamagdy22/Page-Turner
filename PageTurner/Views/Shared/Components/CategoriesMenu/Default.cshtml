@@ -1,0 +1,20 @@
+﻿@model IEnumerable<PageTurner.Models.Category>
+
+<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="ordersDropdown">
+    <li><a class="dropdown-item" asp-controller="Books" asp-action="Index">All Books</a></li>
+    @if (Model.Any())
+    {
+        foreach (var category in Model)
+        {
+            <li>
+                <a class="dropdown-item" asp-controller="Category" asp-action="Index" asp-route-id="@category.ID">
+                    @category.Title
+                </a>
+            </li>
+        }
+    }
+    else
+    {
+        <li><span class="dropdown-item text-muted">No Categories</span></li>
+    }
+</ul>

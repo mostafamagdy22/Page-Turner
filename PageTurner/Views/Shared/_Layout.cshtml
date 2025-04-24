@@ -34,18 +34,7 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-<script>
-    function updateCartCount() {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        document.getElementById("cartCount").textContent = cart.length;
-    }
 
-    document.getElementById("cartIcon").addEventListener("click", function() {
-        window.location.href = "/cart"; // التوجه لصفحة السلة
-    });
-
-    updateCartCount(); // تحديث عدد المنتجات عند تحميل الصفحة
-</script>
 </html>
 <style>
     header {

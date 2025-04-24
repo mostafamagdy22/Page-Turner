@@ -24,14 +24,13 @@
                 <a asp-controller="Books" asp-action="Edit" asp-route-id="@Model.ID" class="btn btn-warning btn-sm">Edit</a>
                 <a asp-controller="Books" asp-action="Delete" asp-route-id="@Model.ID" class="btn btn-danger btn-sm">Delete</a>
             }
-            <a class="btn btn-outline-primary add-to-cart"
-                    asp-action="AddToCart"
-                    asp-controller="Cart"
-                    asp-route-bookID="@Model.ID">
+            <button onclick="addToCart(@Model.ID)">
                 <i class="fas fa-cart-plus"></i> Add to Cart
-            </a>
+            </button>
         </div>
     </div>
 </div>
-
-<script src="/js/LocalStorage.js"></script>
+<form id="tokenForm" style="display:none;">
+    @Html.AntiForgeryToken()
+</form>
+<script src="/js/cartActions.js"></script>

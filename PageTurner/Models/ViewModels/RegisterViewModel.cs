@@ -26,6 +26,8 @@ namespace PageTurner.Models.ViewModels
 		[Required(ErrorMessage = "Address is required.")]
 		[MinLength(10, ErrorMessage = "Address must be at least 10 characters.")]
 		public string Address { get; set; }
-
+		[Required(ErrorMessage = "Number is required.")]
+		[DataType(DataType.PhoneNumber)]
+		public string PhoneNumber { get; set; }
 	}
 }

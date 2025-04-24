@@ -27,8 +27,4 @@
     <Folder Include="wwwroot\images\Books\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\js\LocalStorage.js" />
-  </ItemGroup>
-
 </Project>

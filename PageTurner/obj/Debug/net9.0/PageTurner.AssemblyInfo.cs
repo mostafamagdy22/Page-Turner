@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PageTurner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0fee51198f34793a51640733be919cbac728c05f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+382c8fcdc0ee607496ea59c120239f1a05250ec5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PageTurner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PageTurner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

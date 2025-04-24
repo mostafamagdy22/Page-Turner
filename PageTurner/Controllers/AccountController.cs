@@ -40,7 +40,8 @@ namespace PageTurner.Controllers
                 userModel.Email = model.Email;
                 userModel.Address = model.Address;
 				userModel.PasswordHash = model.Password;
-                IdentityResult result = await _userManger.CreateAsync(userModel,model.Password);
+                userModel.PhoneNumber = model.PhoneNumber;
+				IdentityResult result = await _userManger.CreateAsync(userModel,model.Password);
 
                 if (result.Succeeded)
                 {

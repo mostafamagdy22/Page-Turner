@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
+@using System.Security.Claims
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
@@ -25,8 +26,16 @@
         </button>
         <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
             <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Books" asp-action="Index">Books</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       id="categoriesDropdown"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Categories
+                    </a>
+                    @await Component.InvokeAsync("CategoriesMenu")
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" asp-area="" asp-controller="Authors" asp-action="Index">Authors</a>
@@ -39,10 +48,16 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Account" asp-action="AddAdmin">Add Admin</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="DashBoard" asp-action="Index">dash board</a>
+                    </li>
                 }            
             </ul>
             <ul class="navbar-nav ml-auto">
-                <i class="bi bi-cart cart-icon" id="cartIcon"></i>
+                <a asp-controller="Cart" asp-action="Index" class="nav-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    Basket <span class="badge bg-danger" id="cartCount">0</span>
+                </a>
                 @if (SignInManager.IsSignedIn(User))
                 {
                     <div class="dropdown ms-auto">
@@ -74,6 +89,7 @@
             </ul>
         </div>
     </div>
+
 </nav>
 
 <style>
@@ -92,7 +108,15 @@
 </style>
 
 <script>
-      document.getElementById("cartIcon").addEventListener("click", function() {
-      window.location.href = "cart.html"; 
+    function updateCartCount() {
+        fetch('/Cart/GetCartCount')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('cartCount').textContent = data.count;
+            });
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        updateCartCount();
     });
 </script>
