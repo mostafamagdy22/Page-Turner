@@ -25,34 +25,6 @@ Page-Turner is a full-stack web application designed for a specific bookstore to
   - Secure user registration and login using ASP.NET Identity.
   - Role-based authorization (Admins vs. Users).
 
-## Installation and Setup
-
-### Prerequisites
-- Visual Studio 2019 or later with .NET Framework 4.8
-- SQL Server (Express or Developer Edition)
-- Git
-
-### Steps
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/mostafamagdy22/Page-Turner.git
-   ```
-2. **Set Up the Database**:
-   - Open SQL Server Management Studio.
-   - Create a new database (e.g., `PageTurnerDB`).
-   - Update the connection string in `Web.config` with your database details.
-3. **Configure ASP.NET Identity**:
-   - Ensure the Identity tables are created in the database (automatically via Entity Framework if configured).
-4. **Restore Dependencies**:
-   - Open the solution in Visual Studio.
-   - Build the solution to restore NuGet packages.
-5. **Run Migrations** (if using Entity Framework Code-First):
-   - Open Package Manager Console in Visual Studio.
-   - Run `Update-Database` to apply migrations.
-6. **Run the Application**:
-   - Set the project as the startup project.
-   - Press `F5` to run in Visual Studio.
-
 ## Future Enhancements
 
 - Integrate a payment gateway (e.g., PayPal or Stripe) for secure transactions.
